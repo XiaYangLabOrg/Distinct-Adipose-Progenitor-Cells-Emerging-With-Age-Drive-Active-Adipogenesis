@@ -190,7 +190,7 @@ for(cellType in names(cellTypeDEGsStandard)){
   write.table(cluster_sig,file=paste0("./DEG/",cellType,".txt"),sep='\t') 
 }
 
-########Pathway cite Jessica utils here
+########Pathway cite WrapperFunction_utils.R here
 all_DEG=combined
 dir.create(file.path("/Volumes/data/",CT))
 
@@ -314,16 +314,6 @@ df_summary <- df %>%
 CB <- selected %>%
   left_join(df_summary, by = c("Pathway" = "module")) %>%
   rename(pathway_size = gene_count)
-
-
-
-library(Seurat) 
-library(Matrix)
-library(dplyr)
-library(metap)
-library(stringr)
-library(ggplot2)
-setwd("/Volumes/data/SVF/")
 
 
 #######Cell Type dim plot
